@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<openerp>
+    <data>
+
+        <template id="layout" inherit_id="website.layout">
+
+            <xpath expr="//head" position="inside">
+                <style type="text/css">
+                    <t t-raw="website.custom_styles" />
+                </style>
+            </xpath>
+
+        </template>
+
+        <record id="view_website_custom_styles" model="ir.ui.view">
+            <field name="name">website.custom_styles.form</field>
+            <field name="model">website.config.settings</field>
+            <field name="inherit_id" ref="website.view_website_config_settings"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form/div/group[@string='Menu']" position="before">
+                    <group string="Custom styles">
+                        <div name="custom_styles">
+                            <div>
+                                <field name="custom_styles"/>
+                            </div>
+                        </div>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</openerp>
