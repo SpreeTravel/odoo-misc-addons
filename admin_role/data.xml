@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+        <record id="group_admin" model="res.groups">
+            <field name="name">Administrator</field>
+            <field name="comment">Administrators operate as superusers.
+            </field>
+        </record>
+    </data>
+</openerp>
