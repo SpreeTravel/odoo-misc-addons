@@ -17,7 +17,7 @@
             <field name="model">website.config.settings</field>
             <field name="inherit_id" ref="website.view_website_config_settings"/>
             <field name="arch" type="xml">
-                <xpath expr="//form/div/group[@string='Menu']" position="before">
+                <xpath expr="//form/div" position="inside">
                     <group string="Custom styles">
                         <div name="custom_styles">
                             <div>
